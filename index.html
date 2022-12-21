@@ -5,240 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Modulo M</title>
   <style>
-    .hero{
-    min-height: 100vh;
-    position: relative;
-    --wave-bottom:url('images/bg-section-top-mobile-1.svg');
-    --wave-top:url('images/bg-section-bottom-mobile-1.svg');
-    }
-    .wave{
-
-      height: 100px;
-      background-repeat: no-repeat;
-      background-size: 100% 100px;
-    }
-    .wave--bottom{
-      left: 0;
-      bottom: 0;
-      background-image: var(--wave-bottom);
-    }
-    .wave--top{
-      left: 0; 
-      top: 0;
-      background-image: var(--wave-top);
-    }
-    .section{
-    background-color: var(--very-pale-blue);
-    --padding-container:110px 0;
-    }
-    .section--white{
-      background-color: white;
-      position: relative;
-      --wave-top: url(images/bg-section-bottom-mobile-1.svg);
-      --wave-bottom: url(images/bg-section-top-mobile-2.svg);
-   
-    }
-    .section__container{
-      display: flex;
-      flex-direction: column;
-    }
-    .section__img{
-      width: 100%;
-      max-width: 350px;
-      display: block;
-      margin: 0 auto;
-    }
-    .section__texts{
-      margin-top: 50px;
-      text-align: center;
-    }
-    .subtitle{
-      margin-bottom: 16px;
-      font-family: var(--poppins);
-    }
-    .cta{
-    display: inline-block;
-    background-color: var(--pink);
-    color: white;
-    text-decoration: none;
-    padding: 16px 30px;
-    border-radius: 30px;
-    margin-top: 16px;
-    font-weight: 600;
-}
-.question{
-    text-align: center;
-    position: relative;
-    --wave-top: url('images/bg-section-bottom-mobile-2.svg');
-      --wave-bottom: url('images/bg-footer-top-mobile.svg');
-   
-}
-.footer{
-  color: white;
-  background-color: var(--very-dark-cyan);
-}
-.footer__title{
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-  font-family: var(--poppins);
-}
-.footer__paragraph{
-  line-height: 1.5;
-  margin: 16px 0 50px;
-}
-.footer__form{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
-}
-.footer__input{
-  flex-basis: 100%;
-  flex-grow: 1;
-  font-size: 16px;
-  font-family: var(--open-sans);
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  padding: 16px 6px;
-  margin-bottom: 20px;
-}
-.footer__cta{
-  font-size: 16px;
-  font-family: var(--open-sans);
-  background-color: var(--pink);
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 40px;
-  font-weight: 600;
-  margin-left: auto;
-}
-.footer__contact{
-  line-height: 50px;
-}
-.footer__contact::after{
-  content: "Phone: +1-543-123-4567";
-  margin-left: 10px;
-}
-.footer__contact--email::after{
-  content: "example@huddle.com";
-}
-.footer__social{
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 30px;
-}
-.footer__link{
-  text-decoration: none;
-  width: 40px;
-}
-.footer__icon{
-  width: 100%;
-  display: block;
-}
-@media(min-width:768px){
-  .hero{
-    --wave-bottom:url('images/bg-section-top-desktop-1.svg');
-    
-  }
-  .hero__title{
-    font-size: 48px;
-  }
-  .hero__paragraph{
-    width: 70%;
-  }
-  .cta{
-    padding: 16px 45px;
-  }
-  .hero__numbers{
-    justify-content: space-around;
-    flex-direction: row;
-  }
-  .section__container
-  {
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .section__container--inverse{
-    flex-direction: row;
-  }
-  .section--white{
-
-      --wave-top: url(images/bg-section-bottom-desktop-1.svg);
-      --wave-bottom: url(images/bg-section-top-desktop-2.svg);
   
-  }
-  .section__picture{
-    width: 50%;
-  }
-  .section__texts{
-    margin-top: 0;
-    width: 45%;
-    text-align: start;
-  }
-  .question{
-    --wave-top: url('images/bg-section-bottom-desktop-2.svg');
-    --wave-bottom: url('images/bg-footer-top-desktop.svg');
-   
-  }
-  .footer__container{
-    --padding-container: 110px 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__newsletter{
-    width: 50%;
-    max-width: 350px;
-    order:1;
-  }
-  .footer__content{
-    width: 50%;
-    max-width: 300px;
-  }
-  .footer__paragraph{
-    margin: 16px 0 30px;;
-  }
-
-}
   </style>
 
 </head>
 <body>
-  <header class="hero">
-  <nav class="hero__nav container">
+  <nav class="hero__nav container" style="width: 100%; padding-left: 5%; padding-right: 5%;">
     <figure class="hero__logo">
-      <img src="images/logo.svg" class="hero__huddle" >
+      <img src="images\WM_Wisdom_Logo_Auxiliar.png" class="hero__huddle" >
     </figure>
-    <a href="#" class="hero__cta">Try it free</a>
+    <a href="#" class="hero__cta">Iniciar sesión</a>
   </nav>
+  <header class="hero">
+
   <section class="hero__main container">
     <div class="hero_texts">
-      <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
-      <p class="hero__paragraph">Huddle re-imagines the way we build communities. You have a voice, but so does 
-        your audience. Create connections with your users as you engage in genuine discussion. </p>
-        <a href="#" class="cta">Get Started For Free</a>
+      <h1 class="hero__title">Modulo M</h1>
+      <p class="hero__paragraph">Generamos un reporte en formato Excel señalando los errores encontrados en el pedimento subido por el usuario, que le permitirá tener un mayor conocimiento y control.     </p>
+        <a href="#" class="cta">¡Contáctenos!</a>
     </div>
     <figure class="hero__picture">
       <img src="images/screen-mockups.svg" class="hero__img">
     </figure>
+    <!---->
     <div class="hero__numbers">
       <div class="hero__item">
         <img src="images/icon-communities.svg" class="hero__icon">
-        <h3 class="hero__number">1.4+</h3>
-        <p class="hero__community"> Communities Formed</p>
+        <h3 class="hero__number">Servicio</h3>
+        <p class="hero__community"><b> 24 / 7</b> </p>
       </div>
 
       <div class="hero__item">
         <img src="images/icon-messages.svg" class="hero__icon">
-        <h3 class="hero__number">2.7m+</h3>
-        <p class="hero__community">  Messages Sent</p>
+        <h3 class="hero__number">Rapidez</h3>
+        <p class="hero__community"> <b>Generamos el reporte en un instante</b></p>
       </div>
 
     </div>
@@ -255,9 +58,8 @@
           <img src="images/illustration-grow-together.svg" class="section__img">
         </figure>
         <div class="section__texts">
-          <h2 class="subtitle">Grow Together</h2>
-          <p class="section__paragraph">Generate meaningful discussions with your audience and build a strong, loyal community. 
-            Think of the insightful conversations you miss out on with a feedback form. 
+          <h2 class="subtitle">Obtén respuesta en segundos</h2>
+          <p class="section__paragraph">Este reporte se genera en cuanto el usuario sube el pedimento al programa y se envía en segundos. Pudiendo procesar pedimentos antes de ser entregados para poder corregirlos, así como ya enviados para su verificación.    
           </p>
         </div>
       </div>
@@ -285,9 +87,8 @@
           <img src="images/illustration-your-users.svg" class="section__img">
         </figure>
         <div class="section__texts">
-          <h2 class="subtitle">Your Users</h2>
-          <p class="section__paragraph">It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-            once signed in to your app, your users can start chatting immediately.
+          <h2 class="subtitle">Tus usuarios</h2>
+          <p class="section__paragraph">Puedes trabajar en grupo y como administrador tendrás el control sobre tus empleados, dándote acceso a sus reportes generados, activar sus cuentas y evaluar su desempeño con ayuda de nuestros esquemas. 
           </p>
         </div>
       </div>
@@ -296,7 +97,7 @@
       <div class="wave wave--top"></div>
       <div class="question__texts container">
         <h2 class="subtitle">Ready To Build Your Community?</h2>
-        <a href="#" class="cta">Get Started For Free</a>
+        <a href="#" class="cta__black">Get Started For Free</a>
       </div>
      
       <div class="wave wave--bottom"></div>
@@ -304,57 +105,38 @@
   </main>
   <footer class="footer">
     <div class="footer__container container">
-      <section class="footer__newsletter">
-        <h2 class="footer__title">Newsletter</h2>
-        <p class="footer__paragraph footer__paragraph--newsletter">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-          vestibulum a, ultrices quis sem.</p>
-          <form class="footer__form" action="#">
-            <input type="email" class="footer__input">
-            <input type="submit" class="footer__cta" value="Subscribe">
-            
-          </form>
-      </section>
+     
       <section class="footer__content">
-        <img src="images/logo.svg" class="footer__logo">
-        <p class="footer__paragraph">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit dicta similique adipisci in architecto omnis eaque hic, repellendus laborum?
+        <img src="images/WM_Wisdom_Logo_Auxiliar_BN_Blanco.png"  class="footer__logo" style="width: 20vw; min-width: 140px;">
+        <p class="footer__paragraph" style="width: 200%; margin-bottom: 0px;">
+          <b> Oficina Comercio Exterior:</b><br> 
+          Firmamento #831 Col. Jardines del Bosque, Guadalajara, Jalisco. CP. 44520
         </p>
-        
-        <div class="footer__contact">
+        <div class="footer__contact footer__contact--email">
+          <img src="images/icon-email.svg" class="footer__img">  
+        </div>
+
+        <div class="footer__contact" style="margin-top: 0px;">
+          <img src="images/icon-phone.svg" class="footer__img">
+        </div>
+        <p class="footer__paragraph" style="width: 200%; margin-bottom: 0px;">
+          <b> Oficina Legal-Fiscal:</b><br> 
+          Vidrio #2372 Col. Arcos Sur, Guadalajara, Jalisco. CP. 44150
+        </p>
+
+        <div class="footer__contact2">
           <img src="images/icon-phone.svg" class="footer__img">
           
         </div>
 
-        <div class="footer__contact footer__contact--email">
-          <img src="images/icon-email.svg" class="footer__img">
-          
-        </div>
 
-        <div class="footer__social">
-          <a href="#" class="footer__link">
-            <img src="images/fb.svg" class="footer__icon">
-          </a>
-          <a href="#" class="footer__link">
-            <img src="images/instagram.svg" class="footer__icon">
-          </a>
-          <a href="#" class="footer__link">
-            <img src="images/twitter.svg" class="footer__icon">
-          </a>
-        </div>
+
+
 
       </section>
     </div>
   </footer>
-  <!--
-  
-  
 
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
-
-  Subscribe
-  -->
 
   
 
