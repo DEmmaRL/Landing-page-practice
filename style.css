@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 :root{
+  
     --poppins: 'Poppins', sans-serif;
     --open-sans: 'Open Sans', sans-serif;
 
@@ -28,11 +29,19 @@ body{
 }
 
 .hero__nav{
+  --wave-bottom:url(images/bg-section-bottom-desktop-1.svg);
+
+  
+  --light-blue: #245488;
+  --dark-blue: #243444;
+  background-image: var(--wave-bottom);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    --padding-container: 60px 0 45px;
-}
+    
+    --padding-container: 50px 0 45px 0;
+
+  }
 .hero__logo{
     width: 45%;
     max-width: 160px;
@@ -145,6 +154,17 @@ body{
     margin-top: 16px;
     font-weight: 600;
 }
+.cta__black{
+  display: inline-block;
+
+  background-color: var(--dark-blue);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 16px 30px;
+  border-radius: 30px;
+  margin-top: 16px;
+  font-weight: 600;
+}
 .hero__cta{
     color: var(--light-blue);
     text-decoration: none;
@@ -207,11 +227,18 @@ body{
   line-height: 50px;
 }
 .footer__contact::after{
-  content: "Phone: +1-543-123-4567";
+  content: "  (33) 1955 8575";
+  margin-left: 10px;
+}
+.footer__contact2{
+  line-height: 50px;
+}
+.footer__contact2::after{
+  content: "  (33) 3818 4240";
   margin-left: 10px;
 }
 .footer__contact--email::after{
-  content: "example@huddle.com";
+  content: "info@wmasesoria.com";
 }
 .footer__social{
   display: flex;
@@ -296,6 +323,7 @@ body{
   }
   .footer__paragraph{
     margin: 16px 0 30px;;
+    width: 100%;
   }
 
 }
