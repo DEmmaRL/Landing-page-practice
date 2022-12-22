@@ -255,10 +255,10 @@ body{
   display: block;
 }
 .hero__huddle{
-  width: 10%;
+  width: 100%;
   display: block;
  
-  background-color: brown;
+ 
 }
 @media(min-width:768px){
   .hero{
