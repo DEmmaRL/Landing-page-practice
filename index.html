@@ -8,24 +8,99 @@
   <link rel="stylesheet" href="style copy.css">
   <title>Modulo M</title>
   <style>
-  
+  .form-popup {
+    --light-blue: #245488;
+  --dark-blue: #243444;
+  display: none;
+  position: fixed;
+  background-color: var(--dark-blue);
+  width: 50%;
+  height: 40%; 
+  margin-left: 25%;
+  bottom: 30%;
+  border: 1px solid #0e0d0d;
+
+}
+.form-popup__container{
+  height: 15%;
+}
+.button__close{
+  width: 10%;
+  height: 100%;
+  margin-left: 90%;
+  margin-right: 0;
+}
+
+input[type=text]{
+		background-color: #e4ebff;
+  }
+
+input[type=text]{
+	background-color: #e4ebff;
+	border-radius: 2px;
+	text-align: center;
+   color: black;
+}
+input[type=password]{
+	background-color: #ffffff;
+	border-radius: 2px;
+	text-align: center;
+   color: black;
+
+}
+input[type='submit']{
+	background-color: #245488;
+	border-radius: 4px;
+ 	text-align: center;
+	color: white;
+	width: calc(40% - 20px);
+}
+input[type='submit']:hover {
+
+    transform: scale(1.05);
+	transition: all 0.2s;
+}
+input[type='button']{
+	border-radius: 4px;
+  	text-align: center;
+ 	background-color: #245488;
+	color: white;
+	width: calc(40% - 20px);
+}
+input[type='button']:hover {
+
+    transform: scale(1.05);
+	transition: all 0.2s;
+}
+
   </style>
 
+<script>
+      
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  }
+</script>
 </head>
 <body>
   <nav class="hero__nav container" style="width: 100%; padding-left: 5%; padding-right: 5%;">
     <figure class="hero__logo">
       <img src="images\WM_Wisdom_Logo_Auxiliar.png" class="hero__huddle" >
     </figure>
-    <a href="#" class="hero__cta">Iniciar sesión</a>
+    <button class="hero__cta" onclick="openForm()">Iniciar sesión</button>
   </nav>
   <header class="hero">
   <section class="hero__main container">
     <div class="hero_texts">
-      <h1 class="hero__title">ModulQAAAAAAAAAAAAo M</h1>
+      <h1 class="hero__title">Modulo M</h1>
       <p class="hero__paragraph">Genera reportes en formato Excel señalando los errores encontrados en el pedimento subido, permitiendo tener un mayor conocimiento y control.     </p>
         <a href="#" class="cta">¡Contáctenos!</a>
     </div>
+
     <figure class="hero__picture">
       <img src="images/screen-mockups.svg" class="hero__img">
     </figure>
@@ -134,8 +209,25 @@
       </section>
     </div>
   </footer>
+  <div style="justify-content: center;
+  border: 3px solid #0e0d0d;">
+  <form action="pass_verify.php" method="POST" title="Validación de identidad" class="form-popup" id="myForm">
 
+      <a class="button__close" onclick="closeForm()">X</a>
+    
+    <input class="temp" placeholder="User" type="text" pattern="[^@\s]+@[^@\s]+"  title="Correo no puede tener caracteres especiales y exactamente una @" name="usuario">
+   <input class="temp" placeholder="Password" type="password" pattern="[_-A-Za-z0-9!?- ]" title="La contraseña no puede tener caracteres especiales"  name="pass">
+   
+    <input type="submit" value="Iniciar sesión">
+   
+    <div style="position:absolute;bottom:0px;right:0px;padding: 1%;">
+        <h5>Versión 0.9.3.1.1</h5>
+    </div>
 
+    <button type="button" class="send"  onclick="closeForm()">Cancelar</button>
+  </form>
+
+  </div>
   
 
   

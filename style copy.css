@@ -260,6 +260,7 @@ body{
  
  
 }
+
 @media(min-width:768px){
   .hero{
     --wave-bottom:url('images/bg-section-top-desktop-1.svg');
