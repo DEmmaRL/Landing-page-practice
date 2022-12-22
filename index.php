@@ -22,7 +22,7 @@
   <header class="hero">
   <section class="hero__main container">
     <div class="hero_texts">
-      <h1 class="hero__title">Modulo M</h1>
+      <h1 class="hero__title">ModulQAAAAAAAAAAAAo M</h1>
       <p class="hero__paragraph">Genera reportes en formato Excel señalando los errores encontrados en el pedimento subido, permitiendo tener un mayor conocimiento y control.     </p>
         <a href="#" class="cta">¡Contáctenos!</a>
     </div>
