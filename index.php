@@ -20,7 +20,6 @@
     <a href="#" class="hero__cta">Iniciar sesión</a>
   </nav>
   <header class="hero">
-
   <section class="hero__main container">
     <div class="hero_texts">
       <h1 class="hero__title">Modulo M</h1>
