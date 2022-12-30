@@ -9,15 +9,17 @@
   <title>Modulo M</title>
   <style>
   .form-popup {
-    --light-blue: #245488;
+  --light-blue: #245488;
   --dark-blue: #243444;
   display: none;
   position: fixed;
   background-color: var(--dark-blue);
-  width: 50%;
-  height: 40%; 
-  margin-left: 25%;
-  bottom: 30%;
+  width: 30%;
+  min-width: 200px;
+  height: 30%; 
+  min-height: 200px;
+  margin-left: 35%;
+  bottom: 35%;
   border: 1px solid #0e0d0d;
 
 }
@@ -31,20 +33,31 @@
   margin-right: 0;
 }
 
-input[type=text]{
-		background-color: #e4ebff;
-  }
 
 input[type=text]{
+  align-items: center;
+  width: 80%;
+  height: 15%;
+  min-height: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 3%;
 	background-color: #e4ebff;
 	border-radius: 2px;
-	text-align: center;
+	text-align: left;
    color: black;
 }
 input[type=password]{
+  width: 80%;
+  height: 15%;
+  min-height: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
 	background-color: #ffffff;
 	border-radius: 2px;
-	text-align: center;
+	text-align: left;
    color: black;
 
 }
@@ -54,6 +67,10 @@ input[type='submit']{
  	text-align: center;
 	color: white;
 	width: calc(40% - 20px);
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 15%;
+  margin-bottom: max(20%, 50px);
 }
 input[type='submit']:hover {
 
@@ -66,6 +83,7 @@ input[type='button']{
  	background-color: #245488;
 	color: white;
 	width: calc(40% - 20px);
+  height: 15%;
 }
 input[type='button']:hover {
 
@@ -215,16 +233,17 @@ input[type='button']:hover {
 
       <a class="button__close" onclick="closeForm()">X</a>
     
-    <input class="temp" placeholder="User" type="text" pattern="[^@\s]+@[^@\s]+"  title="Correo no puede tener caracteres especiales y exactamente una @" name="usuario">
-   <input class="temp" placeholder="Password" type="password" pattern="[_-A-Za-z0-9!?- ]" title="La contraseña no puede tener caracteres especiales"  name="pass">
+   <input class="temp" placeholder="Usuario" type="text" style="" pattern="[^@\s]+@[^@\s]+"  title="Correo no puede tener caracteres especiales y exactamente una @" name="usuario">
+   <input class="temp" placeholder="Contraseña" type="password" pattern="[_-A-Za-z0-9!?- ]" title="La contraseña no puede tener caracteres especiales"  name="pass">
    
     <input type="submit" value="Iniciar sesión">
    
-    <div style="position:absolute;bottom:0px;right:0px;padding: 1%;">
-        <h5>Versión 0.9.3.1.1</h5>
-    </div>
+
 
     <button type="button" class="send"  onclick="closeForm()">Cancelar</button>
+    <div style="position:absolute;bottom:0px;right:0px;padding: 1%;">
+      <h5 style="color: #e4ebff;">Versión 0.9.3.1.1</h5>
+  </div>
   </form>
 
   </div>
